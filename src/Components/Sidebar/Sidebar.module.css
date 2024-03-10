@@ -2,7 +2,9 @@
 .sidebar {
     color: white;
     width: var(--sidebar-width);
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: 635px;
+    margin-left:1%;
     position: fixed; 
     top: 15%; 
     left: 0; 
@@ -54,11 +56,51 @@ li button{
     transition: all 0.5s;
 }
 
-li button:hover{
+
+li button.active{
     background:var(--primary-color);
     padding: 10px 80px;
 }
 
-li button.active{
-    background-color: aqua;
+
+.button{
+    padding: 10px 20px;
+    background:var(--primary-color);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 5px var(--primary-color); /* Neon shadow */
+    margin-top: 3%;
+    min-width:150px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+.button .icon{
+    margin-right: 10px;
+}
+
+.button::after{
+    content: "";
+    background:var(--main-color);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(1, 1);
+    transition: all 0.5s;
+}
+
+.button:hover::after{
+    transform: skewX(-45deg) scale(0, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }

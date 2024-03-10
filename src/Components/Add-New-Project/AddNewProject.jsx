@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 
 import Modal from '../Modal/Modal';
 
-export default function AddNewProject({onAdd}){
+export default function AddNewProject({onAdd,cancel}){
 
     const title=useRef();
     const description=useRef();
@@ -30,17 +30,18 @@ export default function AddNewProject({onAdd}){
         })
     }
 
-    // function handleCloseModal(){
-    //     setIsValid(false);
-    // }
+    function handleClear(){
+        title.current.value='';
+        description.current.value='';
+        dueDate.current.value='';
+    }
 
-    
     return(
         <>
         <Modal ref={dialog}></Modal>
         <div className={classes.add_new_project}>
         <div className={classes.buttons}>
-            <Button title={"Cancel"}></Button>
+            <button className={classes.button} onClick={cancel}>Cancel</button>
             <Button onSelect={handleSave} title={"Save"}></Button>
         </div>
         <div className={classes.form}>
