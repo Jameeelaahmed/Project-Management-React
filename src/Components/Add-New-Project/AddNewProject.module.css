@@ -1,0 +1,28 @@
+.add_new_project {
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 30px;
+    background-color: rgba(2, 0, 36, 0.721);
+    margin-left: 21%;
+    z-index: 100;
+    margin-top: 10%;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons button:first-child {
+    margin-right: 10px;
+}
+

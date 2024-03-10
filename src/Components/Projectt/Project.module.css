@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+.project{
+    width:78%;
+    /* justify-content: center; */
+    padding: 30px;
+    background-color:rgba(2, 0, 36, 0.721);
+    margin-left: 21%;
+    z-index: 100;
+    margin-top: 10%;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+}
+
+.project::-webkit-scrollbar{
+    width: 10px;
+}
+
+.proj_details{
+    padding-bottom: 20px;
+    border-bottom: 2px dashed var(--primary-color);
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head p{
+    font-size: 60px;
+    color: var(--primary-color);
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    padding: 10px 50px;
+    border:1px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* .head p::before{
+    content: "";
+    background-image: conic-gradient(aqua 20deg, transparent 120deg);
+    width:100% ;
+    height:100%;
+    position: absolute;
+}
+
+.head p::after{
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 97%;
+    position: absolute;
+    background-color: var(--primary-color);
+    position: absolute;
+    border-radius: 10px;
+} */
+
+
+
+.date{
+    color: white;
+    font-size: 15px;
+}
+
+.description{
+    font-size: 23px;
+    white-space:pre-wrap;
+}
+
+
+.button{
+    padding: 10px 20px;
+    background:var(--primary-color);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 5px var(--primary-color); /* Neon shadow */
+    min-width:150px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+.button .icon{
+    margin-right: 10px;
+}
+
+.button::after{
+    content: "";
+    background:var(--main-color);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(1, 1);
+    transition: all 0.5s;
+}
+
+.button:hover::after{
+    transform: skewX(-45deg) scale(0, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.tasks input:-webkit-autofill {
+    background-color: var(--primary-color) !important; /* Override autofill background color */
+}
+
+.tasks input:-webkit-autofill,
+.tasks input:-webkit-autofill:hover, 
+.tasks input:-webkit-autofill:focus, 
+.tasks input:-webkit-autofill:active{
+    /* -webkit-box-shadow: 0 0 0 30px white inset !important; */
+    background-color: var(--primary-color) !important; /* Override autofill background color */
+}
+
+.tasks{
+    padding-top: 20px;
+    color: white;
+}
+
+.tasks h2{
+    color: var(--primary-color);
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.add_task{
+    display: flex;
+    align-items: center;
+}
+
+.add_task button{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.tasks input{
+    width: 30%;
+    padding: 8px;
+    margin: 20px 10px 10px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 20px;
+    caret-color: var(--primary-color);
+    transition: 0.4s;
+}
+
+.tasks input:focus{
+    outline: none;
+    border: 3px solid var(--primary-color);
+}
+

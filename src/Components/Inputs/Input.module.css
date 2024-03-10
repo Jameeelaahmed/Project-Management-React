@@ -1,0 +1,50 @@
+.cont:first-child {
+    margin-top: 30px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.cont:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.cont label {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cont input,
+.cont textarea {
+    width: 500px;
+    padding: 15px 20px 15px 15px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    caret-color: var(--primary-color);
+}
+
+
+.cont textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+
+.cont textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.cont input:focus,
+.cont textarea {
+    outline: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
