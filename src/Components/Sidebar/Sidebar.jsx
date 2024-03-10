@@ -1,12 +1,15 @@
 import classes from './Sidebar.module.css'
 
 import * as FaIcons from 'react-icons/fa6'
-import Button from '../Button/Button'
+
 export default function Sidebar({onSelect,incrProject, onOpenProject,selectedProjectID}) {
     return (
         <div className={classes.sidebar}>
             <h1>Your Projects</h1>
-            <Button onSelect={onSelect} title="Add Project" icon></Button>
+            <button className={classes.button} onClick={onSelect}>
+                <FaIcons.FaPlus className={classes.icon} />
+                Add Project
+            </button>
             <ul>
                 {
                 incrProject.map((element)=>{

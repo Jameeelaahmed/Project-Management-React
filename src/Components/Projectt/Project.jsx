@@ -2,7 +2,7 @@ import classes from './Project.module.css'
 // import Button from '../Button/Button'
 import { useState ,useRef } from 'react'
 import Task from '../Task/Task';
-export default function Project({project,onDelete,onAddTask,onDeleteTask,tasks}){
+export default function Project({project,onDelete,onAddTask,onDeleteTask,task}){
     const formattedDate=new Date(project.dueDate).toLocaleDateString('en-US',
     {
         day:'numeric',
@@ -38,8 +38,9 @@ export default function Project({project,onDelete,onAddTask,onDeleteTask,tasks})
                     <input ref={title} type="text" />
                     <button onClick={handleAddTask}>Add Task</button>
                 </div>
-                {tasks.length===0 &&<p>No Tasks have been added yet</p>}
-                {tasks.length!==0 && <Task task={tasks} onDelete={onDeleteTask}></Task>}
+                {console.log(task)}
+                {task.length===0 &&<p>No Tasks have been added yet</p>}
+                {task.length!==0 && <Task task={task} onDelete={onDeleteTask}></Task>}
             </div>
         </div>
         </>

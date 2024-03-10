@@ -80,11 +80,22 @@ function App() {
     })
   }
 
+  function handleCancel() {
+    setOpened(prevState => ({
+      ...prevState,
+      selectedProjectID: undefined
+    }));
+  }
+
   const selectedProject=opened.projects.find(project=>project.id===opened.selectedProjectID);
-  console.log(selectedProject)
-  let content=(<Project tasks={opened.tasks} onAddTask={handleAddTask} onDelete={handleDeleteProject} project={selectedProject} onDeleteTask={handleDeleteTask}></Project>)
+  const selectedTask = opened.tasks.filter(
+  (task) =>{
+    return task.projectID === opened.selectedProjectID}
+  );
+
+  let content=(<Project task={selectedTask} onAddTask={handleAddTask} onDelete={handleDeleteProject} project={selectedProject} onDeleteTask={handleDeleteTask}></Project>)
   if(opened.selectedProjectID===null){
-    content=(<AddNewProject onAdd={handleAddProject}></AddNewProject>)
+    content=(<AddNewProject cancel={handleCancel} onAdd={handleAddProject}></AddNewProject>)
   }
   else if(opened.selectedProjectID===undefined){
     content= (<Empty onSelect={handleStartAddProject}></Empty>);
@@ -97,7 +108,7 @@ function App() {
       incrProject={opened.projects} 
       onSelect={handleStartAddProject}
       onOpenProject={handleOpenProject}
-      />
+      selectedProjectID={opened.selectedProjectID}/>
         {content}
     </Container>
     </>
