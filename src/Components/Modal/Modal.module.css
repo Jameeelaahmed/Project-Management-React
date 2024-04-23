@@ -52,6 +52,10 @@
     background: #051715;
 }
 
+.modal p b{
+    color: var(--primary-color);
+}
+
 @keyframes slide-in-from-top {
     0% {
         transform: translateY(-15%);

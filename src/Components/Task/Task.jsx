@@ -1,7 +1,5 @@
 import classes from './Task.module.css'
-// import { useState } from 'react'
 export default function Task({task,onDelete}){
-    console.log(task)
     return (
         <>
         {task.map((element) => (

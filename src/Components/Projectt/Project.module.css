@@ -11,12 +11,12 @@
     margin-right: 20px;
     height: 630px;
     position: relative;
-    z-index: 1;
+    overflow-y: scroll;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
 
 .project::-webkit-scrollbar{
-    width: 10px;
+    display: none;
 }
 
 .proj_details{
@@ -98,9 +98,13 @@
 }
 
 
-.tasks{
+/* .tasks{
     padding-top: 20px;
     color: white;
+} */
+
+.tasks::-webkit-scrollbar{
+    display: none;
 }
 
 .tasks h2{

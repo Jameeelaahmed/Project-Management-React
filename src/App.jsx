@@ -20,6 +20,13 @@ function App() {
       selectedProjectID:null
       }
     })
+    clearInputs();
+  }
+
+  function clearInputs() {
+    title.current.value = '';
+    description.current.value = '';
+    dueDate.current.value = '';
   }
 
   function handleOpenProject(id){
@@ -95,7 +102,7 @@ function App() {
 
   let content=(<Project task={selectedTask} onAddTask={handleAddTask} onDelete={handleDeleteProject} project={selectedProject} onDeleteTask={handleDeleteTask}></Project>)
   if(opened.selectedProjectID===null){
-    content=(<AddNewProject cancel={handleCancel} onAdd={handleAddProject}></AddNewProject>)
+    content=(<AddNewProject cancel={handleCancel} onAdd={handleAddProject} onClearInputs={clearInputs}></AddNewProject>)
   }
   else if(opened.selectedProjectID===undefined){
     content= (<Empty onSelect={handleStartAddProject}></Empty>);

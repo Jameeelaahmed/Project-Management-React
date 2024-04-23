@@ -2,8 +2,6 @@ import classes from './Input.module.css'
 import { forwardRef } from 'react'
 
 const Input=forwardRef(function Input({label,textarea,type},ref){
-    
-    
     return(
     <div className={classes.cont}>
         <label htmlFor={label}>{label}</label>
