@@ -7,7 +7,7 @@
     background-color: rgba(2, 0, 36, 0.721);
     margin-left: 22%;
     z-index: 100;
-    margin-top:8%;
+    margin-top: 115px;
     border-radius: 10px;
     margin-right: 20px;
     height: 630px;
@@ -25,9 +25,9 @@
     margin-right: 10px;
 }
 
-.button{
+.button {
     padding: 10px 20px;
-    background:var(--primary-color);
+    background: var(--primary-color);
     color: white;
     cursor: pointer;
     position: relative;
@@ -38,19 +38,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px 5px var(--primary-color); /* Neon shadow */
+    box-shadow: 0 0 20px 5px var(--primary-color);
+    /* Neon shadow */
     margin-top: 3%;
-    min-width:150px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    min-width: 150px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
 }
 
-.button .icon{
+.button .icon {
     margin-right: 10px;
 }
 
-.button::after{
+.button::after {
     content: "";
-    background:var(--main-color);
+    background: var(--main-color);
     position: absolute;
     z-index: -1;
     left: -20%;
@@ -61,7 +64,7 @@
     transition: all 0.5s;
 }
 
-.button:hover::after{
+.button:hover::after {
     transform: skewX(-45deg) scale(0, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
