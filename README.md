@@ -61,9 +61,9 @@ A simple project management tool that allows users to create, manage, and delete
 - Track progress on each task.
 - Add user authentication for multiple users.
 ![image](https://github.com/user-attachments/assets/6a311606-2b1a-4d98-bb22-0415abad0a53)
+![Screenshot 2024-10-05 171653](https://github.com/user-attachments/assets/92bc47cb-0f97-4151-978e-e5c0fd9354ea)
 ![image](https://github.com/user-attachments/assets/76248244-df66-4edd-95dd-a554966392b7)
 ![image](https://github.com/user-attachments/assets/691f7d43-94f5-4283-9b83-49f2b7a2e637)
-![image](https://github.com/user-attachments/assets/52bcab5f-cffb-4311-9948-6686e58265f6)
 
 
 
