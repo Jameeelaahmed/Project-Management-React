@@ -1,4 +1,4 @@
-Project Management Application
+-Project Management Application
 A simple project management tool that allows users to create, manage, and delete projects, with the ability to add and manage tasks for each project.
 
 Features
