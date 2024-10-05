@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
-.project{
-    width:77%;
+.project {
+    width: 77%;
     padding: 30px;
-    background-color:rgba(2, 0, 36, 0.721);
+    background-color: rgba(2, 0, 36, 0.721);
     margin-left: 22%;
     z-index: 100;
-    margin-top: 8%;
+    margin-top: 115px;
     border-radius: 10px;
     margin-right: 20px;
     height: 630px;
@@ -15,50 +15,50 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
 
-.project::-webkit-scrollbar{
+.project::-webkit-scrollbar {
     display: none;
 }
 
-.proj_details{
+.proj_details {
     padding-bottom: 20px;
     border-bottom: 2px dashed var(--primary-color);
 }
 
-.head{
+.head {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.head p{
+.head p {
     font-size: 60px;
     color: #0923c9;
     font-family: "Kode Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal; 
+    font-style: normal;
     padding: 10px 50px;
-    border:1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     position: relative;
     overflow: hidden;
 }
 
 
-.date{
+.date {
     color: white;
     font-size: 15px;
 }
 
-.description{
+.description {
     font-size: 23px;
-    white-space:pre-wrap;
+    white-space: pre-wrap;
 }
 
 
-.button{
+.button {
     padding: 10px 20px;
-    background:var(--primary-color);
+    background: var(--primary-color);
     color: white;
     cursor: pointer;
     position: relative;
@@ -69,18 +69,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px 5px var(--primary-color); /* Neon shadow */
-    min-width:150px; /* Adjust as needed */
-    height: 50px; /* Adjust as needed */
+    box-shadow: 0 0 20px 5px var(--primary-color);
+    /* Neon shadow */
+    min-width: 150px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
 }
 
-.button .icon{
+.button .icon {
     margin-right: 10px;
 }
 
-.button::after{
+.button::after {
     content: "";
-    background:var(--main-color);
+    background: var(--main-color);
     position: absolute;
     z-index: -1;
     left: -20%;
@@ -91,7 +94,7 @@
     transition: all 0.5s;
 }
 
-.button:hover::after{
+.button:hover::after {
     transform: skewX(-45deg) scale(0, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -103,11 +106,11 @@
     color: white;
 } */
 
-.tasks::-webkit-scrollbar{
+.tasks::-webkit-scrollbar {
     display: none;
 }
 
-.tasks h2{
+.tasks h2 {
     color: #0923c9;
     font-family: "Kode Mono", monospace;
     font-optical-sizing: auto;
@@ -115,12 +118,12 @@
     font-size: 30px;
 }
 
-.add_task{
+.add_task {
     display: flex;
     align-items: center;
 }
 
-.add_task button{
+.add_task button {
     background-color: var(--primary-color);
     padding: 10px 20px;
     border: none;
@@ -130,7 +133,7 @@
     cursor: pointer;
 }
 
-.tasks input{
+.tasks input {
     width: 30%;
     padding: 8px;
     margin: 20px 10px 10px 0px;
@@ -143,8 +146,7 @@
     transition: 0.4s;
 }
 
-.tasks input:focus{
+.tasks input:focus {
     outline: none;
     border: 3px solid var(--primary-color);
 }
-
